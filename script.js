@@ -14,7 +14,6 @@ startBtn.addEventListener('click', () => {
 nextBtn.addEventListener('click', () => {
     currentQuestionIndex++
     count.innerText = `${currentQuestionIndex + 1} / ${questions.length}`
-    console.log(currentQuestionIndex + 1)
     setNextQuestion()
 })
 
@@ -24,7 +23,6 @@ function startGame() {
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     count.innerText = `${currentQuestionIndex + 1} / ${questions.length}`
-    console.log(currentQuestionIndex + 1)
     questionContainerElem.classList.remove('hide')
     setNextQuestion()
     

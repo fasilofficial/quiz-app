@@ -170,5 +170,3 @@ export const questions = [
         ]
     },
 ]
-
-console.log(questions.length)
