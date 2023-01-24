@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+body {
+    --hue: var(--hue-neutral)
+    margin: 0;
+    padding: 0;
+    background: #0575E6;
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    background: linear-gradient(to right, #021B79, #0575E6);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+body.correct {
+    background: #56ab2f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+body.wrong {
+    background: #f85032;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+h1, #count {
+    color: #fff;
+    position: absolute;
+}
+#count {
+    top: 160px;
+}
+h1 {
+    top: 100px;
+}
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: aliceblue;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 20px 2px;
+}
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+.btn {
+    background: #0575E6;
+    border-radius: 5px;
+    border: 2px solid hsl(200, 100%, 30%);
+    outline: none;
+    padding: 8px;
+    font-weight: bold;
+    color: #efefef;
+}
+.btn.correct {
+    background: #56ab2f;
+}
+.btn.wrong {
+    background: #f85032;
+}
+.btn:active {
+    transform: scale(.98);
+}
+.btn:hover {
+    border-color: #000;
+}
+.start-btn, .next-btn {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hide {
+    display: none;
+}
